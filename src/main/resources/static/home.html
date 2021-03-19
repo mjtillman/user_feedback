@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Add Data To UserFeedback</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+   <script src="js/submitFeedback.js"></script>
+</head>
+<body class="bg-dark">
+<nav class="navbar navbar-dark container-fluid" style="background-color: #000000;" >
+   <a href="/" class="navbar-brand">User Feedback</a>
+</nav>
+<main>
+   <div class="card text-center mx-auto mt-5" id="formCard" style="visibility: visible; width: 18rem;
+    background-color: #e9ecef;">
+      <div class="card-header mb-3">
+         <strong>Add New Feedback</strong>
+      </div>
+      <div class="card-body p-0 text-align-center">
+
+<!--         HERE IS YOUR FORM TAG        -->
+         <form id="feedback" name="feedback" class="needs-validation" action="/accepted" method="GET" onsubmit="submitForm()">
+            <div class="mb-3">
+               <label for="username">Username</label><br />
+               <input type="text" id="username" name="username" required />
+               <div class="invalid-feedback">Please provide a username.</div>
+            </div>
+            <div class="mb-3">
+               <label for="rating" style="font-size: small">Please rate on a scale from 1 - 5</label>
+               <select class="form-select w-50 m-auto" id="rating" name="rating" required>
+                  <option selected value="">Select rating...</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+               </select>
+               <div class="invalid-feedback">Please select a rating.</div>
+            </div>
+            <div class="mb-3">
+               <label for="comments">Comments</label><br />
+               <textarea id="comments" name="comments"></textarea>
+            </div>
+            <div class="card-footer">
+               <input type="submit" value="Post" class="btn btn-sm btn-secondary" />
+            </div>
+               </form>
+         </div>
+      <div>
+   </div>
+   </div>
+</main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</html>
